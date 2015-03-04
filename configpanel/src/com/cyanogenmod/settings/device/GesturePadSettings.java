@@ -16,8 +16,6 @@
 
 package com.cyanogenmod.settings.device;
 
-import com.android.internal.util.cm.ScreenType;
-
 import com.cyanogenmod.settings.device.utils.Constants;
 import com.cyanogenmod.settings.device.utils.NodePreferenceActivity;
 
@@ -44,10 +42,7 @@ public class GesturePadSettings extends NodePreferenceActivity {
     protected void onResume() {
         super.onResume();
 
-        // If running on a phone, remove padding around the listview
-        if (!ScreenType.isTablet(this)) {
-            getListView().setPadding(0, 0, 0, 0);
-        }
+        getListView().setPadding(0, 0, 0, 0);
     }
 
     @Override
